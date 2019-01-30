@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{siunitx}
+\title{Практическая работа №6}
+\author{студент: Комаров Александр
+группа 8871}
+\begin{document}
+\maketitle
+\begin{tikzpicture}
+\draw (0,-5) to [C, l_={$C_1$},*-*] (5,-5);
+\draw (2.5,0) to [R, l={$R_1$},*-*] (5,-5);
+\draw (0,-5) to [L, l={$L_1$},*-*] (2.5,0);
+
+\draw (2.5,0) -- (15,0);
+\draw (5,-5) -- (13,-5);
+\draw (0,-5) -- (0,-7);
+\draw (0,-7) -- (17,-7);
+\draw (17,-7) -- (17,-5);
+
+\draw (13,-5) to [L, l_={$L_2$},*-*] (15,-2.5);
+\draw (15,-2.5) to [L, l={$L_3$},*-*] (15,0);
+\draw (15,-2.5)  to [L, l={$L_4$},*-*] (17,-5);
+
+\end{tikzpicture}
+\end{document}
